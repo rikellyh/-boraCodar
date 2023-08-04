@@ -23,6 +23,7 @@ const theme = extendTheme({
     global: {
       "html, body": {
         backgroundColor: "brand.purple3",
+        overflow: "hidden",
       },
     },
   },
