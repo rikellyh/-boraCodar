@@ -9,7 +9,7 @@ const Message = ({ text, currentTime }) => {
         m="0.5rem"
         justifySelf="right"
         sx={{
-          "@media screen and (min-width: 1000px)": {
+          "@media screen and (min-width: 767px)": {
             maxW: "25rem",
           },
         }}

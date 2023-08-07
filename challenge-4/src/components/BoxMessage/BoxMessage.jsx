@@ -39,6 +39,17 @@ const BoxMessage = () => {
           overflow="auto"
           templateRows="repeat(7, 1fr)"
           className="custom-scrollbar"
+          sx={{
+            "@media screen and (min-height: 800px)": {
+              h: "70vh",
+            },
+            "@media screen and (min-height: 1100px)": {
+              h: "75vh",
+            },
+            "@media screen and (min-width: 1100px)": {
+              w: "75%",
+            },
+          }}
         >
           <GridItem
             maxW="10rem"
@@ -62,56 +73,59 @@ const BoxMessage = () => {
             <Message key={index} text={message} currentTime={currentTime} />
           ))}
         </Grid>
-      </VStack>
-      <Box
-        maxH="5rem"
-        maxW="55rem"
-        m="0.5rem"
-        borderRadius="25px"
-        boxShadow="0px 0px 8px rgba(0, 0, 0, 0.2)"
-        sx={{
-          "@media screen and (min-width: 1000px)": {
-            m: "0.5rem auto",
-          },
-        }}
-      >
-        <Textarea
-          w="86%"
-          maxLength={700}
-          placeholder="Digite sua mensagem"
-          resize="none"
-          value={text}
-          onChange={(event) => setText(event.target.value)}
-          variant="unstyled"
-          color="brand.white"
-          fontSize="0.85rem"
-          border="none"
-          outline="none"
-          padding="0.5rem 1rem"
+        <Box
+          maxH="5rem"
+          maxW="55rem"
+          w="90%"
+          m="0.5rem"
+          borderRadius="25px"
+          boxShadow="0px 0px 8px rgba(0, 0, 0, 0.2)"
           sx={{
-            "@media screen and (min-width: 800px)": {
-              w: "92%",
+            "@media screen and (min-width: 1000px)": {
+              m: "0.5rem auto",
             },
           }}
-        />
-        <Button
-          w="1rem"
-          h="2.5rem"
-          bg="transparent"
-          border="none"
-          outline="none"
-          mf="0.75rem"
-          onClick={sendMessage}
-          _hover={{
-            bg: "none",
-            color: "inherit",
-            textDecoration: "none",
-            boxShadow: "none",
-          }}
         >
-          <ChevronRightIcon w="1.5rem" h="1.5rem" color="brand.white" />
-        </Button>
-      </Box>
+          <Textarea
+            w="86%"
+            maxLength={700}
+            placeholder="Digite sua mensagem"
+            resize="none"
+            value={text}
+            onChange={(event) => setText(event.target.value)}
+            variant="unstyled"
+            color="brand.white"
+            fontSize="0.85rem"
+            border="none"
+            outline="none"
+            padding="0.5rem 1rem"
+            sx={{
+              "@media screen and (min-width: 800px)": {
+                w: "92%",
+              },
+            }}
+          />
+          <Button
+            w="1rem"
+            h="2.5rem"
+            mt="1rem"
+            bg="transparent"
+            border="none"
+            outline="none"
+            mf="0.75rem"
+            display="unset"
+            onClick={sendMessage}
+            _hover={{
+              bg: "none",
+              color: "inherit",
+              textDecoration: "none",
+              boxShadow: "none",
+            }}
+          >
+            <ChevronRightIcon w="1.5rem" h="1.5rem" color="brand.white" />
+          </Button>
+        </Box>
+      </VStack>
     </>
   );
 };
