@@ -5,7 +5,7 @@ import Avatar from "../../assets/avatar.jpeg";
 const HeaderAvatar = () => {
   return (
     <Flex
-      boxShadow="0px 4px 8px rgba(0, 0, 0, 0.2)"
+      boxShadow="0px 3px rgba(0, 0, 0, 0.1)"
       alignItems="center"
       pl="0.5rem"
       pb="0.5rem"

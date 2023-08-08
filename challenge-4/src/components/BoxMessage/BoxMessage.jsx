@@ -98,7 +98,7 @@ const BoxMessage = () => {
             fontSize="0.85rem"
             border="none"
             outline="none"
-            padding="0.5rem 1rem"
+            padding="0.75rem 1rem"
             sx={{
               "@media screen and (min-width: 800px)": {
                 w: "92%",
@@ -110,17 +110,9 @@ const BoxMessage = () => {
             h="2.5rem"
             mt="1rem"
             bg="transparent"
-            border="none"
-            outline="none"
             mf="0.75rem"
-            display="unset"
+            transition="none"
             onClick={sendMessage}
-            _hover={{
-              bg: "none",
-              color: "inherit",
-              textDecoration: "none",
-              boxShadow: "none",
-            }}
           >
             <ChevronRightIcon w="1.5rem" h="1.5rem" color="brand.white" />
           </Button>
