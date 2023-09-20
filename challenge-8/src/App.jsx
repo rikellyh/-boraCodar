@@ -1,7 +1,10 @@
+import Dashboard from "./pages/Dashboard";
+import "./styles/_base.scss";
+
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <Dashboard />
     </>
   );
 }
